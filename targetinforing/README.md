@@ -6,5 +6,13 @@ Original author: nwwdles (https://gitlab.com/nwwdles/war-addons/-/tree/master/ta
 
 Modified by Xpander
 
-- Smaller text
-- No classic statusbar
+Features:
+- Smaller text than on Original
+- Distance from target
+- HP percentage
+- Career Name and Rank
+
+
+Removed:
+- Classic Statusbar
+- Target name
