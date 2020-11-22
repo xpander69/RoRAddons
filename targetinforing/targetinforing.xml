@@ -1,0 +1,75 @@
+<Interface xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../Interface.xsd">
+    <Assets>
+        <Texture name="TargetInfoRing" file="targetinforing.dds" />
+    </Assets>
+
+    <Windows>
+        <Window name="TargetInfoRingWindow" handleinput="false" popable="false" layer="background">
+            <Size>
+                <AbsPoint x="100" y="100" />
+            </Size>
+            <Anchors>
+                <Anchor point="center" relativePoint="center" relativeTo="Root">
+                    <AbsPoint x="0" y="-200" />
+                </Anchor>
+            </Anchors>
+            <Windows>
+                <DynamicImage name="$parentRing" texture="TargetInfoRing" layer="default" popable="false" sticky="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="100" y="100" />
+                    </Size>
+                    <!-- <TexCoords x="457" y="463" /> -->
+                    <Anchors>
+                        <Anchor point="center" relativePoint="center">
+                            <AbsPoint x="0" y="0" />
+                        </Anchor>
+                    </Anchors>
+
+                </DynamicImage>
+
+                <Label name="$parentCareerTitle" font="font_clear_small_bold" maxchars="200" autoresize="true" textalign="right" popable="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="400" y="25" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="left" relativePoint="right" relativeTo="$parent">
+                            <AbsPoint x="0" y="15" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="254" g="0" b="0" a="255" />
+                </Label>
+
+                <Label name="$parentHP" font="font_clear_small_bold" autoresize="true" textalign="left" popable="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="120" y="20" />
+                    </Size>
+                    <Anchors>
+                        <!-- <Anchor point="topleft" relativePoint="topleft" relativeTo="$parent">
+                        <AbsPoint x="0" y="25" />
+                    </Anchor>
+                    <Anchor point="topright" relativePoint="topright" relativeTo="$parent">
+                        <AbsPoint x="0" y="25" />
+                    </Anchor> -->
+                        <Anchor point="bottom" relativePoint="bottom" relativeTo="$parent">
+                            <AbsPoint x="0" y="25" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="254" g="0" b="0" a="255" />
+                </Label>
+
+                <Label name="$parentRange" font="font_clear_small_bold" autoresize="true" textalign="center" popable="false" handleinput="false">
+                    <Size>
+                        <AbsPoint x="128" y="24" />
+                    </Size>
+                    <Anchors>
+                        <Anchor point="bottom" relativePoint="top" relativeTo="$parentHP">
+                            <AbsPoint x="0" y="5" />
+                        </Anchor>
+                    </Anchors>
+                    <Color r="255" g="255" b="255" a="255" />
+                </Label>
+                <!-- <DynamicImage name="$parentBackground" handleinput="false" alpha="0.8" layer="default" scale="1" popable="false"> -->
+            </Windows>
+        </Window>
+    </Windows>
+</Interface>
